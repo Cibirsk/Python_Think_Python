@@ -20,17 +20,18 @@ def circle(t, r):
     polygon(bob, long_totale/nbr_side, nbr_side)
 
 
-def arc(t, r, angle):
+def arc(turtle, r, angle):
     long_totale = (r*2*3.14)
     nbr_side = 100
+    angle_arc = int(100 / (360/angle))
 
-    for i in range(angle):
+    for i in range(angle_arc):
         turtle.fd(long_totale/nbr_side)
         turtle.lt(360/nbr_side)  # calcul l'angle selon nbr cotés
 
 
-circle(bob, 100)
-#arc(bob, 100, 180)
+#circle(bob, 100)
+arc(bob, 100, 360)
 
 
 turtle.mainloop()
