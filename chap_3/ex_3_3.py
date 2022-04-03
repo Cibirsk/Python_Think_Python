@@ -1,29 +1,26 @@
-def plus_trait():
-    print('+', 4*' - ', '+', 4*' - ', end=' ')
+plus_start = "+ - - - - +"
+plus_end = " - - - - +"
+pipe_start = "|         |"
+pipe_end = "         |"
 
 
-def pipe_space():
-    print('|', 12*' ', '|', 12*' ', end=' ')
+def print_line(value1, value2):
+    print(value1, value2)
 
 
-def deux_lignes(f, separ):
-    f()
-    print(separ)
+def print_four_line(value1, value2):
+    print(value1, value2)
+    print(value1, value2)
+    print(value1, value2)
+    print(value1, value2)
 
 
-def do_four(f, separ):
-    f()
-    print(separ)
-    f()
-    print(separ)
-    f()
-    print(separ)
-    f()
-    print(separ)
+def print_carre(plus_start, plus_end, pipe_start, pipe_end):
+    print_line(plus_start, plus_end)
+    print_four_line(pipe_start, pipe_end)
+    print_line(plus_start, plus_end)
+    print_four_line(pipe_start, pipe_end)
+    print_line(plus_start, plus_end)
 
 
-deux_lignes(plus_trait, '+')
-do_four(pipe_space, '|')
-deux_lignes(plus_trait, '+')
-do_four(pipe_space, '|')
-deux_lignes(plus_trait, '+')
+print_carre(plus_start, plus_end, pipe_start, pipe_end)
