@@ -4,6 +4,17 @@ import math
 import turtle
 
 
+def polygon(t, n, length):
+    """Draws a polygon with n sides.
+
+    t: Turtle
+    n: number of sides
+    length: length of each side.
+    """
+    angle = 360.0/n
+    polyline(t, n, length, angle)
+
+
 def polyline(t, n, length, angle):
     """Draws n line segments.
 
@@ -15,17 +26,6 @@ def polyline(t, n, length, angle):
     for i in range(n):
         t.fd(length)
         t.lt(angle)
-
-
-def polygon(t, n, length):
-    """Draws a polygon with n sides.
-
-    t: Turtle
-    n: number of sides
-    length: length of each side.
-    """
-    angle = 360.0/n
-    polyline(t, n, length, angle)
 
 
 def arc(t, r, angle):
@@ -60,16 +60,27 @@ def circle(t, r):
 # running as a script, in which case run the test code,
 # or being imported, in which case don't.
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#     bob = turtle.Turtle()
+
+#     # draw a circle centered on the origin
+#     radius = 100
+#     bob.pu()
+#     bob.fd(radius)
+#     bob.lt(90)
+#     bob.pd()
+#     circle(bob, radius)
+
+#     # wait for the user to close the window
+#     turtle.mainloop()
+
+def flower_1():
     bob = turtle.Turtle()
+    for i in range(7):
+        arc(bob, 50, 180)
+        bob.lt(60)
 
-    # draw a circle centered on the origin
-    radius = 100
-    bob.pu()
-    bob.fd(radius)
-    bob.lt(90)
-    bob.pd()
-    circle(bob, radius)
 
-    # wait for the user to close the window
-    turtle.mainloop()
+flower_1()
+
+turtle.mainloop()
