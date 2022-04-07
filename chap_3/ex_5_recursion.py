@@ -5,4 +5,5 @@ def blast(s, n):
     blast(s, n-1)
 
 
-blast('top ', 5)
+name = input('your name ? \n')
+print(name)
