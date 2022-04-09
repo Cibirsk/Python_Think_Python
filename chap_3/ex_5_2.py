@@ -11,8 +11,3 @@ def check_fermat():
 
 
 check_fermat()
-
-# a = 3
-# b = 4
-# n = 2
-# print(a**n)
