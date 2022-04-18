@@ -7,4 +7,10 @@ def is_palindrome(word):
         return False
 
 
-print(is_palindrome('abcdcba'))
+def is_palindrome2(word):
+    if word == word[::-1]:
+        return True
+    return False
+
+
+print(is_palindrome2('rbcdcba'))
