@@ -32,12 +32,22 @@ def is_reverse(word1, word2):
 # s = 'mike and bob'
 # print(s.replace('i', 'A'))
 
-a = "MIKE,,-_"
-b = a.strip(",;:_- ")
-print(b)
+# a = "MIKE,,-_"
+# b = a.strip(",;:_- ")
+# print(b)
 
 # c = "abcda"
 # print(c.count("a"))
 
 # fruit = 'banana'
 # print(fruit[::2])
+jack_age = 23
+alex_age = 2 
+lana_age = 1 
+
+if jack_age < alex_age and jack_age < lana_age:
+    print(jack_age)
+elif alex_age < jack_age and alex_age < lana_age:
+    print(alex_age)
+else:
+    print(lana_age)
