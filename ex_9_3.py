@@ -11,10 +11,13 @@ def has_no_e():
     pourcent_no_e = int(nbr_word_no_e / nbr_word * 100)
     print('Il y a ' + str(pourcent_no_e) + ' % de mot sans e ')
 
-def avoid(str):
-    letter = input('saisir les lettres: ')
-    if letter not in str:
-        return True
-    return False
-
+def avoid():
+    forbid_letter = input('saisir les lettres: ')
+    fin = open('words.txt')
+    for line in fin:
+        word = line.strip()
+        for letter in forbid_letter:
+            if letter in word:
+                return False
+        
 print(avoid('azerty'))
