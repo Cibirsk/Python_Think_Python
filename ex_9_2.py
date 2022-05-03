@@ -9,6 +9,6 @@ def has_no_e():
             nbr_word_no_e += 1
             print(word)
     pourcent_no_e = int(nbr_word_no_e / nbr_word * 100)
-    print('Il y a ' + str(pourcent_no_e) + ' % de mot sans e ')
+    print('Il y a ' + str(pourcent_no_e) + ' % de mots sans e ')
 
 has_no_e()
